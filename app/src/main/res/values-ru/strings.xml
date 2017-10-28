@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Artolela</string>
+    <string name="title_activities">Искусство изучения языка</string>
+    <string name="title_activity_about_application">О приложении</string>
+
+    <string name="start_button">Начать</string>
+    <string name="error">Выберите разные языки!</string>
+    <string name="language_from">Выберите родной язык</string>
+    <string name="language_to">Выберите язык, который Вы изучаете</string>
+    <string name="levels">Выберите количество уровней</string>
+    <string name="error2">Выберите количество уровней > 0!</string>
+
+    <string name="image_view_text">Картина</string>
+    <string name="next">Далее</string>
+    <string name="finish">Закончить</string>
+
+    <string name="again">Сыграть снова</string>
+    <string name="error3">Выберите ответ!</string>
+    <string name="score">%1$d / %2$d</string>
+    <string name="result">правильных ответов</string>
+
+    <string name="dialog_wifi_title">Отсутствует подключение к сети Интернет</string>
+    <string name="dialog_wifi_message">Хотите перейти к настройкам, чтобы включить Wi-Fi?</string>
+    <string name="dialog_wifi_positive_button">Да</string>
+    <string name="dialog_wifi_negative_button">Нет</string>
+
+    <string name="about_app"><u>О приложении</u></string>
+    <string name="text_about_application"><b>Artolela</b> - это приложение для изучения различных языков при помощи известных картин.
+
+        \n\nНа данный момент в приложении 757 картин и 3 поддерживаемых языка: русский, английский и итальянский. Источник картин и их названий: wikidata.org
+
+        \n\n<b>Разработчики:</b>
+        \nКирилл Орлов, <i>Петрозаводский государственный университет</i>
+        \nКристина Шевцова, <i>Петрозаводский государственный университет</i>
+
+        \n\n<b>E-mail:</b> artolela@gmail.com
+    </string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#03a9f4</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#ba68c8</color>
+    <color name="colorBackground">#fafafa</color>
+
+    <color name="textColor">#424242</color>
+    <color name="buttonTextColor">#FFFFFF</color>
+    <color name="colorControlNormal">#87CEFA</color>
+    <color name="colorControlActivated">#00BFFF</color>
+    <color name="toastBackground">#81d4fa</color>
+    <color name="buttonBorderColor">#00BFFF</color>
+
+    <color name="dialogColorBackground">#eeeeee</color>
+    <color name="dialogColorAccent">#00BFFF</color>
+</resources>

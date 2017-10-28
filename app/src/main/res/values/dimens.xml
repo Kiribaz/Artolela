@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textSize">20sp</dimen>
+    <dimen name="pictureNameTextSize">20sp</dimen>
+    <dimen name="radioButtonTextSize">18sp</dimen>
+    <dimen name="buttonTextSize">28sp</dimen>
+    <dimen name="margin">10dp</dimen>
+    <dimen name="aboutMargin">16dp</dimen>
+    <dimen name="padding">8dp</dimen>
+    <dimen name="spinnerMargin">8dp</dimen>
+    <dimen name="buttonWidth">150dp</dimen>
+    <dimen name="buttonHeight">60dp</dimen>
+</resources>

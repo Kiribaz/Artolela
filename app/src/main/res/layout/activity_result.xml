@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/margin">
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="@string/result"
+        android:textSize="80sp" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/score"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_marginTop="@dimen/margin" />
+
+    <Button
+        android:id="@+id/again_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/result"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin"
+        android:padding="@dimen/padding"
+        android:text="@string/again" />
+
+</RelativeLayout>

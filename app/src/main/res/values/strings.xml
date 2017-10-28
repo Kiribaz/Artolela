@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Artolela</string>
+    <string name="title_activities">Art of learning language</string>
+    <string name="title_activity_about_application">About application</string>
+
+    <string name="start_button">Start</string>
+    <string name="error">Choose different languages!</string>
+    <string name="language_from">Select your language</string>
+    <string name="language_to">Select language you are studying</string>
+    <string name="levels">Select number of levels</string>
+    <string name="error2">Select number of levels > 0!</string>
+
+    <string name="image_view_text">Picture</string>
+    <string name="next">Next</string>
+    <string name="finish">Finish</string>
+
+    <string name="again">Play again</string>
+    <string name="error3">Choose option!</string>
+    <string name="score">%1$d / %2$d</string>
+    <string name="result">right answers</string>
+
+    <string name="dialog_wifi_title">There is no network connection</string>
+    <string name="dialog_wifi_message">Do you want to go to the settings to turn on Wi-Fi?</string>
+    <string name="dialog_wifi_positive_button">Yes</string>
+    <string name="dialog_wifi_negative_button">No</string>
+
+    <string name="about_app"><u>About application</u></string>
+    <string name="text_about_application"><b>Artolela (Art of learning language)</b> is application for studying different languages with famous pictures.
+
+        \n\nAt the moment there are 757 pictures and 3 supported languages: Russian, English and Italian. Source of pictures and their labels is wikidata.org
+
+        \n\n<b>Developers:</b>
+        \nKirill Orloff, <i>Petrozavodsk State University</i>
+        \nKristina Shevtsova, <i>Petrozavodsk State University</i>
+
+        \n\n<b>E-mail:</b> artolela@gmail.com
+    </string>
+</resources>

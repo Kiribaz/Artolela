@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayoutId"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/margin"
+    android:orientation="vertical"
+    android:weightSum="2">
+
+    <ImageView
+        android:id="@+id/picture"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:contentDescription="@string/image_view_text" />
+
+    <LinearLayout
+        android:id="@+id/answers"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/picture_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="@dimen/padding"
+            android:paddingTop="@dimen/padding"
+            android:textSize="@dimen/pictureNameTextSize" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioGroup
+                android:id="@+id/pictures_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/padding"
+        android:text="@string/next" />
+
+    <ImageView
+        android:id="@+id/full_size_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:contentDescription="@string/image_view_text" />
+
+</LinearLayout>

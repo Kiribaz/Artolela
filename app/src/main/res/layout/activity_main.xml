@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="2">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/margin"
+        android:layout_weight="1.9"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/languageFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/margin"
+            android:text="@string/language_from" />
+
+        <Spinner
+            android:id="@+id/spinnerFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/languageFrom"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/margin" />
+
+        <TextView
+            android:id="@+id/languageTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinnerFrom"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/margin"
+            android:gravity="center"
+            android:text="@string/language_to" />
+
+        <Spinner
+            android:id="@+id/spinnerTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/languageTo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/margin" />
+
+        <TextView
+            android:id="@+id/levels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinnerTo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/margin"
+            android:text="@string/levels" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/levels"
+            android:layout_centerHorizontal="true" />
+
+        <RelativeLayout
+            android:id="@+id/seekBarValues"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/seekBar"
+            android:layout_marginBottom="@dimen/margin">
+
+            <TextView
+                android:id="@+id/seekBarMinValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/seekBarValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/seekBarMaxValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
+                android:layout_marginEnd="6dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/start_button"
+            android:layout_width="@dimen/buttonWidth"
+            android:layout_height="@dimen/buttonHeight"
+            android:layout_below="@+id/seekBarValues"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/start_button" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/about_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_weight="0.1"
+        android:clickable="true"
+        android:text="@string/about_app" />
+
+</LinearLayout>
+
