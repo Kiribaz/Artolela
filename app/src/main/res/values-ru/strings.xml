@@ -33,7 +33,17 @@
         \n\n<b>Разработчики:</b>
         \nКирилл Орлов, <i>Петрозаводский государственный университет</i>
         \nКристина Шевцова, <i>Петрозаводский государственный университет</i>
+        \nВасилий Фокин, <i>Петрозаводский государственный университет</i>
 
         \n\n<b>E-mail:</b> artolela@gmail.com
     </string>
+    <string name="action_settings">Настройки</string>
+    <string name="action_settings_classic">Классическая игра</string>
+    <string name="action_settings_audio">Режим аудирования</string>
+    <string name="action_settings_full_audio">Полное аудирование</string>
+    <string name="action_settings_no_help">Режим без подписи к картине</string>
+    <string name="exit">Выход</string>
+    <string name="action_settings_file_name">Название файлов</string>
+    <string name="help">Проверить</string>
+    <string name="play_button">Воспроизвести</string>
 </resources>

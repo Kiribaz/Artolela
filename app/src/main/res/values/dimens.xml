@@ -10,4 +10,5 @@
     <dimen name="spinnerMargin">8dp</dimen>
     <dimen name="buttonWidth">150dp</dimen>
     <dimen name="buttonHeight">60dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>

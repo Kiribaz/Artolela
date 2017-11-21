@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.wifi.WifiManager;
@@ -12,6 +13,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.AlertDialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -30,15 +33,27 @@ public class MainActivity extends AppCompatActivity {
     private SQLiteHelper dbHelper;
     String languageFrom, languageTo;
     String[] languages;
-    final int seekBarMinValue = 0;
+    final int seekBarMinValue = 5;
     final int seekBarMaxValue = 50;
     final int seekBarStep = 5;
     int levelsCount;
+
+    public static final String APP_PREFERENCES = "settings";
+    public static final String APP_PREFERENCES_STRING_FROM = "from";
+    public static final String APP_PREFERENCES_STRING_TO = "to";
+    private SharedPreferences mSettings;
+
+    int languageFromID = 0;
+    int languageToID = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mSettings = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
+        languageFromID = mSettings.getInt(APP_PREFERENCES_STRING_FROM, 1);//123
+        languageToID = mSettings.getInt(APP_PREFERENCES_STRING_TO, 0);//123
 
         dbHelper = new SQLiteHelper(this);
         languages = getResources().getStringArray(R.array.languages);
@@ -46,10 +61,15 @@ public class MainActivity extends AppCompatActivity {
         final Spinner spinnerFrom = (Spinner) findViewById(R.id.spinnerFrom);
         MyCustomAdapter adapterFrom = new MyCustomAdapter(MainActivity.this, R.layout.spinner, languages);
         spinnerFrom.setAdapter(adapterFrom);
+        spinnerFrom.setSelection(languageFromID);
         spinnerFrom.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View itemSelected, int selectedItemPosition, long selectedId) {
                 String[] chosenLanguageFrom = getResources().getStringArray(R.array.languages);
                 languageFrom = chosenLanguageFrom[selectedItemPosition];
+                languageFromID = spinnerFrom.getSelectedItemPosition();
+                SharedPreferences.Editor editor = mSettings.edit();
+                editor.putInt(APP_PREFERENCES_STRING_FROM, languageFromID);
+                editor.apply();
             }
 
             public void onNothingSelected(AdapterView<?> parent) {
@@ -59,10 +79,15 @@ public class MainActivity extends AppCompatActivity {
         final Spinner spinnerTo = (Spinner) findViewById(R.id.spinnerTo);
         MyCustomAdapter adapterTo = new MyCustomAdapter(MainActivity.this, R.layout.spinner, languages);
         spinnerTo.setAdapter(adapterTo);
+        spinnerTo.setSelection(languageToID);
         spinnerTo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View itemSelected, int selectedItemPosition, long selectedId) {
                 String[] chosenLanguageTo = getResources().getStringArray(R.array.languages);
                 languageTo = chosenLanguageTo[selectedItemPosition];
+//                languageToID = spinnerFrom.getSelectedItemPosition();
+                SharedPreferences.Editor editor = mSettings.edit();
+                editor.putInt(APP_PREFERENCES_STRING_TO, selectedItemPosition);
+                editor.apply();
             }
 
             public void onNothingSelected(AdapterView<?> parent) {
@@ -146,6 +171,29 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch (id) {
+            case R.id.action_settings:
+                Intent intent_settings = new Intent(MainActivity.this, SettingsActivity.class);
+                startActivity(intent_settings);
+                return true;
+            case R.id.action_about:
+                Intent intent_about = new Intent(MainActivity.this, AboutApplicationActivity.class);
+                startActivity(intent_about);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     private class MyCustomAdapter extends ArrayAdapter<String> {

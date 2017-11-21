@@ -18,8 +18,13 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.URI;
+import java.net.URL;
 
 import kriskires.artolela.Data.PictureContract;
+
+import static android.content.ContentValues.TAG;
+import static android.net.Uri.decode;
 
 /* Helper for Database */
 
@@ -83,7 +88,10 @@ class SQLiteHelper extends SQLiteOpenHelper {
                     imagesValues.put("url", url);
                 }
                 if ((eventType == XmlPullParser.START_TAG) && (_xml.getName().equals("FileName"))) {
-                    filename = _xml.nextText().substring(23);
+                    try {
+                        filename = _xml.nextText().substring(19);///23
+                    }catch (Exception e){
+                    }
                     imagesValues.put("filename", filename);
                 }
                 if ((url != null) && (filename != null)) {
